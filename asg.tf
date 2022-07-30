@@ -20,9 +20,9 @@ resource "aws_launch_template" "template" {
 
 # Auto Scaling Group
 resource "aws_autoscaling_group" "asg" {
-  desired_capacity = 3
+  desired_capacity = 1
   max_size         = 99
-  min_size         = 3
+  min_size         = 1
   vpc_zone_identifier  = data.aws_subnet_ids.subnet.id
   
 
